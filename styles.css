@@ -1,0 +1,61 @@
+body {
+				
+				
+}
+.container{
+				width: 70%;
+				display : flex;
+				flex-wrap : wrap;
+				flex-direction : column;
+				
+}
+.item1{
+				flex : 5;
+				width: 100%;				
+				overflow-wrap : break-word;
+				color: ;
+				background: #FFF5EE;
+				padding: 15px ;
+				border-radius: 10px;
+				font-weight :  ;
+				font-family : Monospace ;
+				font-size : 16px;
+				
+}
+.item2{
+				flex : 1;
+				background: #E0F6FF ;
+				padding: 10px ;
+				width: 30%;
+				margin: 15px ;
+				text-align : center ;
+				
+				
+}
+.strikeThrough{
+				text-decoration : line-through ;
+				color: #D3D3D3;
+				font-style: italic;
+				font-weight : normal ;
+}
+.textarea{
+				width: 70%;
+				height: 100px;
+}
+.textarea:focus{
+				border : 2px solid #E0F6FF;
+				outline : none;
+}
+.btn{
+				padding: 15px ;
+				color: #000;
+				font-size : 14px;
+				font-weight : bold;
+				border : 1px solid #000;
+				border-radius: 10px;
+				background: #E0F6FF;
+				margin: 5px ;
+}
+.btn:active{
+				background: #fff;
+}

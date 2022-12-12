@@ -1,0 +1,26 @@
+body {
+												padding: 5px ;
+								}
+				.header{
+								padding: 5px ;
+								display: flex;
+								background: #E0F6FF ;
+								margin-bottom : 15px;
+				}	
+				#item1{
+								flex :3;							
+				}	
+				#item2{
+								flex : 1;
+								text-align : right;
+								padding: 10px ;
+				}
+				.newClass{		
+																											
+								text-decoration : line-through;		
+								background: #E0F6FF ;	
+								}
+				.changeDisplay{
+								display : none;
+				}
+				

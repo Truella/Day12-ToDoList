@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+				<title>To-do list</title>
+				<link rel="stylesheet" href="stylesheet.css">
+				<link rel="stylesheet" href="styles.css">
+				<style>
+								
+								.classy{
+												color : #1e1e1e;
+								}																		
+				</style>
+</head>
+<body id="body">
+<header class="header">
+				<div id="item1">
+								<h1>TraKie</h1>
+				</div>
+				<div id="item2">
+								<button id="changeMode">lite</button>
+				</div>
+</header>		
+				<h2>Let TraKie help keep track of your activities. </h2>	
+					<div id="firstParent">
+								<input type="button" class="btn" id="firstBtn" value="Add a new task">
+				</div>
+				<ol id="listParent">
+								
+				</ol>
+				<input type="button" id="clearListBtn" value="Clear To-do List" class="btn">
+				<script>
+								const body = document.getElementById("body");
+								const firstParent = document.getElementById("firstParent");
+								const firstBtn = document.getElementById("firstBtn") ;							
+								const textArea = document.createElement("textarea") ;
+								textArea.classList.add("textarea");
+								const secondBtn = document.createElement("button");
+								secondBtn.classList.add("btn");
+								const clearListBtn = document.getElementById("clearListBtn");
+								
+								secondBtn.innerHTML = "save" ;								
+								firstBtn.addEventListener("click", addNew) ;
+									
+								secondBtn.addEventListener("click",createNewList);
+								function addNew() {
+												firstParent.appendChild(textArea);
+												firstParent.appendChild(secondBtn);
+												firstParent.appendChild(clearListBtn) ;
+												firstParent.removeChild(firstBtn);
+												
+								}
+								function removeChild() {
+												firstParent.removeChild(textArea) ;
+												firstParent.removeChild(secondBtn) ;
+												firstParent.appendChild(firstBtn) ;
+								}
+								<!-- ///// -->
+								function NewList() {
+												const listParent = document.getElementById("listParent") ;
+								const listItem = document.createElement("li") ;
+								const Hex = document.createElement("p")
+								Hex.innerHTML = "Delete task" ;
+												listParent.appendChild(listItem);
+												listItem.innerHTML = textArea.value;
+												listParent.appendChild(Hex);
+												textArea.value = " " ;
+												function style() {
+																listParent.classList.add("container");
+												listItem.classList.add("item1");
+												Hex.classList.add("item2", "btn" );
+												}
+												style() ;
+												listItem.addEventListener("click",function () {
+																listItem.classList.toggle("strikeThrough"); 
+																
+												}) 
+												Hex.addEventListener("click",function () {
+																listParent.removeChild(listItem);
+																listParent.removeChild(Hex) ;
+												}  ) ;
+																			clearListBtn.addEventListener("click",function () {
+																			if(textArea.value.length < 0) {
+																			alert("No list to clear");
+																											
+												}
+												else {
+																listItem.classList.add("changeDisplay");
+																			 Hex.classList.add("changeDisplay");			
+																 
+												}
+								}) ;
+
+								}
+								function createNewList() {
+												if(textArea.value.length > 0) {
+																NewList() ;
+																removeChild() ;
+																															
+												}
+								}
+			</script>
+			<!-- if(listParent.children.length > 0) {
+																	listItem.classList.add("changeDisplay");
+																			 Hex.classList.add("changeDisplay");
+
+																
+												}
+												else {
+																alert("No list to clear") ;
+												}
+												 
+												 -->
+</body>
+</html>
